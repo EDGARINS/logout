@@ -39,23 +39,6 @@ public class Main {
         usernameField.setBounds(80,5,100,20);
         panel.add(usernameField);
 
-        JLabel email = new JLabel("Email: ");
-        email.setBounds(1,20,80,25 );
-        panel.add(email);
-
-        TextField emailField = new TextField();
-        emailField.setBounds(80,25,100,20);
-        panel.add(emailField);
-
-//        JLabel city = new JLabel("city: ");
-//        city.setBounds(1,40,80,25 );
-//        panel.add(city);
-
-//        TextField cityField = new TextField();
-//        cityField.setBounds(80,45,100,20);
-//        panel.add(cityField);
-
-
         JButton okButton = new JButton("Sign IN");
         okButton.setBounds(5,120,100,20);
         panel.add(okButton);
@@ -70,12 +53,6 @@ public class Main {
             public void actionPerformed(ActionEvent e)
             {
                 String UserN = usernameField.getText();
-                String EmailN = emailField.getText();
-
-//                text.setText(UserN);
-//                text1.setText(EmailN);
-//                text2.setText(CityN);
-
                 if (UserN.isEmpty()){
                     Error.setText("Error");
                 } else if (UserN.equals("edgars")){
@@ -93,11 +70,11 @@ public class Main {
                 frame.remove(Dashbord);
                 frame.add(panel);
                 frame.repaint();
-                Error.setText("You are loged out!");
+                Error.setText("You are logged out!");
             }
         });
 
 
-        }
-
     }
+
+}
